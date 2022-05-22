@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+:root{
+    /* primary-colors */
+    --supervisor-color : hsl(180, 62%, 55%);
+    --team-builder-color : hsl(0, 78%, 62%);
+    --karam-color: hsl(34, 97%, 64%);
+    --calculator-color: hsl(212, 86%, 64%);
+
+    /* neutral-colors */
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-lightgray: hsl(0, 0%, 98%);
+    
+    --font : 'Poppins', sans-serif;
+    --font-size: 15px;
+    --desktop-width: 1440px;
+    --moblie-width: 375px;
+
+}
+body {
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+
+  }
+
+.container{
+    background-color: var(--very-lightgray);
+    width: var(--desktop-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+.heading1{
+    color: var(--grayish-blue);
+    font-weight: 200;
+}
+.heading2{
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+p{
+    color: var(--grayish-blue);
+}
+
+.cards-container{
+    margin-top: 50px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 70%;
+    gap: 25px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    position: relative;
+    min-width: 250px;
+
+}
+.supervisor-card{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border-top: var(--supervisor-color) solid 5px;
+}
+
+.team-builder-card{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-top: var(--team-builder-color) solid 5px;
+}
+
+.karma-card{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    border-top: var(--karam-color) solid 5px;
+}
+
+.calculator-card{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border-top: var(--calculator-color) solid 5px;
+}
+
+.img{
+    margin-top: 40px;
+    display: flex;
+    justify-content: end;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .container{
+        width: var(--moblie-width);
+        height: 100%;
+
+    }
+
+ 
+    .container > p{
+        width: 260px;
+        text-align: center;
+    }
+
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: auto;
+        text-align: left;
+    }
+
+    .heading1{
+        transform: scale(0.8);
+    }  
+    .heading2{
+        transform: scale(0.8);
+    }
+  }
+
+
+
+
+
