@@ -41,6 +41,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 1.5rem;
     
 }
 
@@ -54,6 +55,11 @@ body {
     font-weight: 600;
 }
 
+.container > p{
+    width: 500px;
+    text-align: center;
+}
+
 p{
     color: var(--grayish-blue);
 }
@@ -64,7 +70,6 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 70%;
     gap: 25px;
 }
 
